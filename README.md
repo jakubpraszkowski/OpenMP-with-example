@@ -6,6 +6,9 @@ Then, the program should automatically change the number of threads from 0 to 10
 Each time, the search should start from the beginning (previous results should be cleared).
 The program should display the time it takes to perform the calculations and a table of results (range from-to and number of occurrences). The results should be displayed only when the last of the threads finishes working and the timer is stopped.
 ## Usage/Examples
+For windows users check if you need to use g++ https://techsupportwhale.com/install-gcc-compiler-on-windows/.
+CLion is running g++ out of the box.
+
 Check if the compiler is installed, use --version. For this example gcc is used
 ```bash
     g++ --version
