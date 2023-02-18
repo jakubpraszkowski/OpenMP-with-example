@@ -39,8 +39,11 @@ int main() {
         cin >> cont;
     } while (cont == 'y');
 
-    int counts[rangeIndex][11];                  // tablica przechowująca liczbę wystąpień liczb z zakresu w macierzy, w zależności od liczby wątków
-    memset(counts, 0, sizeof(counts));           // wypełnienie tablicy zerami
+    int** counts = new int* [rangeIndex];
+    for (int i = 0; i < rangeIndex; i++) {
+        counts[i] = new int[11];
+        memset(counts[i], 0, 11 * sizeof(int));    // wypełnienie tablicy zerami
+        
     cout << omp_get_max_threads() << endl;       // wypisanie maksymalnej liczby dostępnych wątków
     for (int t = 0; t <= 10; t++) {              // pętla iterująca po liczbie wątków
         omp_set_num_threads(t);                  // ustawienie liczby wątków dla sekcji równoległej
